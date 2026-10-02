@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎬 Movie Watchlist Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 Movie Watchlist Tracker</h1>
+
+    <section class="card">
+      <h2>เพิ่มภาพยนตร์ใหม่</h2>
+      <form id="add-movie-form">
+        <input type="text" id="title" placeholder="ชื่อภาพยนตร์" required>
+        <input type="text" id="director" placeholder="ชื่อผู้กำกับ" required>
+        <input type="text" id="genre" placeholder="หมวดหมู่ (เช่น Sci-Fi, Drama)" required>
+        <button type="submit" class="btn-primary">เพิ่มเข้าลิสต์</button>
+      </form>
+    </section>
+
+    <section class="card filter-section">
+      <h3>ตัวกรองการรับชม (Query String)</h3>
+      <label>สถานะ:</label>
+      <select id="filter-watched">
+        <option value="">ทั้งหมด</option>
+        <option value="true">ดูแล้ว (✅)</option>
+        <option value="false">ยังไม่ได้ดู (🍿)</option>
+      </select>
+    </section>
+
+    <section class="card">
+      <h2>รายชื่อภาพยนตร์ทั้งหมด</h2>
+      <ul id="movie-list" class="movie-list"></ul>
+    </section>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
